@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Electricity Consumption</title>
+<body>
+<script>
+units = prompt("Enter units consumed");
+units = Number(units);
+
+if (units <= 50)
+{
+document.write("Low consumption");
+}
+
+else if (units <= 100)
+{
+document.write("Normal consumption");
+}
+
+else if (units <= 200)
+{
+document.write("High consumption");
+}
+
+else
+{
+document.write("Very high consumption");
+}
+
+</script>
+</body>
+</html>

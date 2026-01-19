@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Electricity Bill</title>
+</head>
+<body>
+  <h2>Electricity Bill </h2>
+
+  <script>
+    let units = prompt("Enter total units consumed:");
+    units = Number(units);
+
+    let bill = 0;
+
+    if (units <= 50) {
+      bill = units * 2;
+    } 
+    else if (units <= 150) {
+      bill = (50 * 2) + ((units - 50) * 3);
+    } 
+    else if (units <= 250) {
+      bill = (50 * 2) + (100 * 3) + ((units - 150) * 4);
+    } 
+    else if (units > 250) {
+      bill = (50 * 2) + (100 * 3) + (100 * 4) + ((units - 250) * 5);
+    } 
+    else {
+      document.write("Invalid input!");
+    }
+
+    if (units >= 0) {
+      document.write("Total Units: " + units + "<br>");
+      document.write("Electricity Bill: ₹" + bill);
+    }
+  </script>
+</body>
+</html>

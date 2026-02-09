@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bank Account</title>
+</head>
+<body>
+    <script>
+        class Bank{
+            constructor(name,balance){
+			    this.name = name;
+                this.balance = balance;
+            }
+            showBalance(){
+			document.write('Account Holder: $(this.name)<br>');
+			document.write('Balance: $(this.balance)<br><br>');
+			}
+			
+			deposit(amount) {
+                this.balance += amount;
+                document.write('Deposited: ₹${amount} + <br>');
+                this.showBalance();
+            }
+
+            withdraw(amount) {
+                if (amount <= this.balance) {
+                    this.balance -= amount;
+                    document.write('Withdrawn: ₹${amount} + <br>');
+                } else {
+                    document.write("Insufficient Balance<br>");
+                }
+				this.showBalance();
+            }
+
+            let userName =prompt("Enter account holder name:"));
+            let initialBalance = parseFloat(prompt("Enter initial Balance:"));
+
+            let Amount = new bank(prompt(userName, initialBalance);
+            account.showBalance();
+
+            let depAmount = Number(prompt("Enter amount to deposit:"));
+            account.deposit(depAmount);
+			
+			let withAmount = Number(prompt("Enter amount to withdraw:"));
+			account.withdraw(withAmount);
+</script>
+</body>
+</html>
+

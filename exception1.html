@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exception Handling Example</title>
+</head>
+<body>
+
+    <h2>Division using Exception Handling</h2>
+
+    <label>Numerator:</label>
+    <input type="number" id="num1"><br>
+
+    <label>Denominator:</label>
+    <input type="number" id="num2"><br>
+
+    <button onclick="divide()">Divide</button>
+
+    <div id="output"></div>
+
+    <script>
+        function divide() {
+            let result;
+            let output = document.getElementById("output");
+
+            try {
+                let a = parseFloat(document.getElementById("num1").value);
+                let b = parseFloat(document.getElementById("num2").value);
+
+                if (b === 0) {
+                    throw new Error("Denominator cannot be zero.");
+                }
+
+                result = a / b;
+                output.innerHTML = "Result: " + result;
+            }
+            catch (error) {
+                output.innerHTML = "Error: " + error.message;
+            }
+            finally {
+                console.log("Division operation completed.");
+            }
+        }
+    </script>
+
+</body>
+</html>

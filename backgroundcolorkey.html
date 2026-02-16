@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Background Color Change</title>
+</head>
+<body onkeydown="changeColor()">
+
+<h2>Press any key</h2>
+<p>Background color will change when a key is pressed.</p>
+
+<script>
+    function changeColor() {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+
+        document.body.style.backgroundColor =
+            "rgb(" + r + "," + g + "," + b + ")";
+    }
+</script>
+
+</body>
+</html>

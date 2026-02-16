@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Random Background Color</title>
+</head>
+<body onclick="changeColor()">
+
+<h2>Click anywhere on the page</h2>
+<p>Background color changes to a random color on mouse click.</p>
+
+<script>
+    function changeColor() {
+
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+
+        document.body.style.backgroundColor = 
+            "rgb(" + r + "," + g + "," + b + ")";
+    }
+</script>
+
+</body>
+</html>

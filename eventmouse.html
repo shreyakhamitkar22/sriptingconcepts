@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Event</title>
+</head>
+<body>
+
+<button 
+    onmouseover="showMsg()" 
+    onmouseout="hideMsg()">
+    Move Mouse Over button
+</button>
+
+<p id="msg"></p>
+<hr>
+<h2>Double-click the button to see alert</h2>
+
+<button ondblclick="showAlert()">Double Click Me</button>
+
+
+<script>
+    function showMsg() {
+        document.getElementById("msg").innerHTML =
+            "Mouse is moved over the button";
+    }
+
+    function hideMsg() {
+        document.getElementById("msg").innerHTML = "";
+    }
+    function showAlert() {
+        alert("Button double-clicked!");
+    }
+</script>
+
+</body>
+</html>
+
+
